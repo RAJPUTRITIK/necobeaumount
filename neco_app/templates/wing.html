@@ -1,0 +1,22 @@
+{% extends 'head_foot.html' %}
+{% load static %}
+{% block content %}
+
+    <div class="row ">
+        <div class="col-sm-3">
+            <div class="card">
+                <div class="card-body text-center">
+                    <a href="{% url 'building_a' %}" class="btn btn-primary"><h5 class="card-title">Wing A</h5></a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="card">
+                <div class="card-body text-center">
+                    <a href="{% url 'building_b' %}" class="btn btn-primary"><h5 class="card-title">Wing B</h5> </a>
+                </div>
+            </div>
+        </div>
+    </div> 
+
+{% endblock  %}

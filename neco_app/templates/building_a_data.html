@@ -1,0 +1,72 @@
+{% extends 'head_foot.html' %}
+{% load static %}
+{% block content %}
+
+    <div class="container">
+        <div class="row g-5">
+            <div class="col-md-7 col-lg-8">
+                <h4 class="mb-3"></h4>
+                {{msg}}
+                
+                    {% for i in data %}
+                    <div class="row g-3">
+                        <div class="col-sm-6">
+                            <label for="building" class="form-label">Building</label>
+                            <input type="text" class="form-control" id="building" placeholder="" value="{{i.building}}" required>
+                            <div class="invalid-feedback">
+                            Valid flat number is required.
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <label for="flatnumber" class="form-label">Flat number</label>
+                            <input type="number" class="form-control" id="flatnumber" placeholder="" value="{{i.room_number}}" required>
+                            <div class="invalid-feedback">
+                            Valid flat number is required.
+                            </div>
+                        </div>
+                    
+                        <div class="col-12">
+                            <label for="ownername" class="form-label">Owner name</label>
+                            <div class="input-group has-validation">
+                                <span class="input-group-text">@</span>
+                                <input type="text" class="form-control" id="ownername" placeholder="Enter name" value="{{i.owner_name}}" required>
+                                <div class="invalid-feedback">
+                                    Your name is required.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-12">
+                            <label for="member" class="form-label">Member</label>
+                            <input type="number" class="form-control" id="member" placeholder="" value="{{i.member}}" required>
+                            <div class="invalid-feedback">
+                            Please enter number in your family.
+                            </div>
+                        </div>
+        
+                        <div class="col-sm-6">
+                            <label for="mobilenumber" class="form-label">Mobile number</label>
+                            <input type="number" class="form-control" id="mobilenumber" placeholder="" value="{{i.mobile_number}}" required>
+                            <div class="invalid-feedback">
+                            Mobile number is required.
+                            </div>
+                        </div> 
+                    </div>
+                    
+                    {% endfor%}
+                
+                
+            </div>
+        </div>
+    </div>
+  
+
+
+
+
+
+ 
+
+
+  {% endblock  %}
